@@ -105,7 +105,7 @@
   <div class="form-container">
     <h2>Send us a message</h2>
     
-    <!-- IMPORTANT: Replace YOUR_FORM_ID with your actual Formspree ID (e.g. xrgvpbzo) -->
+    <!-- CHANGE YOUR_FORM_ID BELOW TO YOUR REAL FORMSPREE ID (e.g. xrgvpbzo) -->
     <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       
       <div class="form-group">
@@ -162,7 +162,7 @@
           if (Object.hasOwn(result, 'errors')) {
             status.innerText = result["errors"].map(error => error["message"]).join(", ");
           } else {
-            status.innerText = "Oops! There was a problem submitting your form.";
+            status.innerText = "Form not found. Please verify your Formspree ID.";
           }
         }
       } catch (error) {
